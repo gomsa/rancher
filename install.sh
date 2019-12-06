@@ -59,7 +59,7 @@ Install_open_iscsi(){
 
 Install_rancher(){
     docker run -d --restart=unless-stopped \
-    -p 80:$panelPort -p 443:$panelHttpsPort \
+    -p $panelPort:80 -p $panelHttpsPort:443 \
     -v $setup_path:/var/lib/rancher \
     rancher/rancher:latest
 }
