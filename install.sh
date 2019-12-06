@@ -67,6 +67,7 @@ Install_Main(){
     echo -e "\033[32m=== start install ===\033[0m"
     startTime=`date +%s`
     Install_Docker
+    Install_NTP
     Set_Docker
     Set_System
     Install_open_iscsi
